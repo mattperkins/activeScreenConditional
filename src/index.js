@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
 import styled, {injectGlobal} from 'styled-components'
 import App from './App'
+import Link2 from './Link2'
 
 //eslint-disable-next-line
 injectGlobal`
@@ -67,9 +68,16 @@ state = {
   }
 // end constructor
 
+
 doSwitch = () => {
   this.setState({
-    screenIndex: 2
+    screenIndex : 2
+  })
+}
+
+doLink2 = () => {
+  this.setState({
+    screenIndex : 1
   })
 }
 
@@ -82,7 +90,6 @@ let activeScreen
   if(this.state.screenIndex === 2) {
     activeScreen = <Screen2 /> }
 
-
    return(
      <div>
 <Header title="Customer is King"/>
@@ -92,7 +99,8 @@ let activeScreen
 <button onClick={this.doSwitch}>Switch</button>
 </Body>
 
-<App switch="I am switch"/>	
+<App switcher={this.doSwitch} switchTxt="Switch it up Jesus" />	
+<Link2 link2={this.doLink2} link2Txt="I am LINK 2"/>
 
 <Footer title="Make contact"/>
 				

@@ -1,11 +1,8 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-class App extends Component {
-    render(props){
-        return (
-            <p>{this.props.switch}</p>
-        )
-    }
-}
-
-export default App
+export default ({switcher, switchTxt}) => <button 
+                style={{marginLeft: 50}}
+                 onClick={switcher} >
+                 {switchTxt} 
+            </button>
+        
