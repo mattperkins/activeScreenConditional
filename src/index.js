@@ -67,15 +67,21 @@ state = {
   }
 // end constructor
 
+doSwitch = () => {
+  this.setState({
+    screenIndex: 2
+  })
+}
 
 render() {
 let activeScreen
 
-if(this.state.screenIndex === 1) {
-activeScreen = <Screen1 /> }
+  if(this.state.screenIndex === 1) {
+    activeScreen = <Screen1 /> }
 
-if(this.state.screenIndex === 2) {
-activeScreen = <Screen2 /> }
+  if(this.state.screenIndex === 2) {
+    activeScreen = <Screen2 /> }
+
 
    return(
      <div>
@@ -83,7 +89,7 @@ activeScreen = <Screen2 /> }
 				
 <Body>{activeScreen}</Body>
 
-<App switch="I am switch"/>	
+<App onClick={this.doSwitch} switch="I am switch"/>	
 
 <Footer title="Make contact"/>
 				
