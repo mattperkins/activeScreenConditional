@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
-import styled, {injectGlobal} from 'styled-components'
+import {injectGlobal} from 'styled-components'
+import Header from './Header'
+import Body from './Body'
 import Footer from './Footer'
 import Link1 from './Link1'
 import Link2 from './Link2'
@@ -12,35 +14,6 @@ body {
 font-family: serif;
 }
 `
-
-const headerStyle = {
-backgroundColor: '#fb1330',
-padding: 40
-}
-
-const Header = ({title}) => {
-return (
-<div style={headerStyle}>
-<h1>{title}</h1>
- 
-</div>
-)
-}
-
-const Wrapper = styled.div`
-padding: 40px;
-`
- 
-const Body = ({children}) => {
-return (
-<Wrapper>
-  {children}
-</Wrapper>
-)
-}
-
-
-
 
 
 
@@ -58,8 +31,6 @@ export default class Root extends Component {
 state = {
   screenIndex: 1
   }
-// end constructor
-
 
 doSwitch = () => {
   this.setState({
@@ -84,8 +55,10 @@ let activeScreen
   if(this.state.screenIndex === 2) {
     activeScreen = <Screen2 /> }
 
-   return(
-     <div>
+return(
+ 
+<div>
+
 <Header title="Customer is King"/>
 				
 <Body>
@@ -100,10 +73,13 @@ let activeScreen
 
 </div>
 
+
+
 <Footer
     title="configure props to change bg"/>
 				
-     </div> 
+</div> 
+
   )// end return
 }// end render
 
