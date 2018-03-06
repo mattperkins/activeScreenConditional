@@ -87,9 +87,12 @@ let activeScreen
      <div>
 <Header title="Customer is King"/>
 				
-<Body>{activeScreen}</Body>
+<Body>
+  {activeScreen}
+<button onClick={this.doSwitch}>Switch</button>
+</Body>
 
-<App onClick={this.doSwitch} switch="I am switch"/>	
+<App switch="I am switch"/>	
 
 <Footer title="Make contact"/>
 				
