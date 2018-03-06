@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
 import styled, {injectGlobal} from 'styled-components'
-import App from './App'
+import Link1 from './Link1'
 import Link2 from './Link2'
 
 //eslint-disable-next-line
@@ -99,7 +99,7 @@ let activeScreen
 <button onClick={this.doSwitch}>Switch</button>
 </Body>
 
-<App switcher={this.doSwitch} switchTxt="Switch it up Jesus" />	
+<Link1 switcher={this.doSwitch} switchTxt="Switch it up Jesus" />	
 <Link2 link2={this.doLink2} link2Txt="I am LINK 2"/>
 
 <Footer title="Make contact"/>
