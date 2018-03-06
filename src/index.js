@@ -83,7 +83,7 @@ activeScreen = <Screen2 /> }
 				
 <Body>{activeScreen}</Body>
 
-<App />	
+<App switch="I am switch"/>	
 
 <Footer title="Make contact"/>
 				

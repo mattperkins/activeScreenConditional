@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 
 class App extends Component {
-    render(){
+    render(props){
         return (
-            <p>The App component</p>
+            <p>{this.props.switch}</p>
         )
     }
 }
