@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker'
 import styled, {injectGlobal} from 'styled-components'
+import Footer from './Footer'
 import Link1 from './Link1'
 import Link2 from './Link2'
 
@@ -38,19 +39,10 @@ return (
 )
 }
 
-const footerStyle = {
-backgroundColor: '#333',
-color: '#f7f7f7',
-padding: 40
-}
 
-const Footer = ({title}) => {
-	return (
-<div style={footerStyle}>
-<h3>{title}</h3>
-</div>
-)
-}
+
+
+
 
 const Screen1 = () => {
 	return <p>Screen 1</p>
@@ -81,7 +73,9 @@ doLink2 = () => {
   })
 }
 
+
 render() {
+
 let activeScreen
 
   if(this.state.screenIndex === 1) {
@@ -96,15 +90,18 @@ let activeScreen
 				
 <Body>
   {activeScreen}
-<button onClick={this.doSwitch}>Switch</button>
 </Body>
 
 <div style={{marginBottom: 50}}>
+
 <Link1 switcher={this.doSwitch} switchTxt="Screen 2" />	
+
 <Link2 link2={this.doLink2} link2Txt="Screen 1"/>
+
 </div>
 
-<Footer title="Make contact"/>
+<Footer
+    title="configure props to change bg"/>
 				
      </div> 
   )// end return
