@@ -99,8 +99,10 @@ let activeScreen
 <button onClick={this.doSwitch}>Switch</button>
 </Body>
 
-<Link1 switcher={this.doSwitch} switchTxt="Switch it up Jesus" />	
-<Link2 link2={this.doLink2} link2Txt="I am LINK 2"/>
+<div style={{marginBottom: 50}}>
+<Link1 switcher={this.doSwitch} switchTxt="Screen 2" />	
+<Link2 link2={this.doLink2} link2Txt="Screen 1"/>
+</div>
 
 <Footer title="Make contact"/>
 				
